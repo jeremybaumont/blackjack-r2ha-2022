@@ -11,7 +11,7 @@ class CardDisplayTest {
     public void displayTenAsString() throws Exception {
         Card card = new Card(DUMMY_SUIT, Rank.TEN);
 
-        assertThat(card.display())
+        assertThat(Card.display(card))
                 .isEqualTo("[31m┌─────────┐[1B[11D│10       │[1B[11D│         │[1B[11D│    ♥    │[1B[11D│         │[1B[11D│       10│[1B[11D└─────────┘");
     }
 
@@ -19,7 +19,7 @@ class CardDisplayTest {
     public void displayNonTenAsString() throws Exception {
         Card card = new Card(DUMMY_SUIT, Rank.SEVEN);
 
-        assertThat(card.display())
+        assertThat(Card.display(card))
                 .isEqualTo("[31m┌─────────┐[1B[11D│7        │[1B[11D│         │[1B[11D│    ♥    │[1B[11D│         │[1B[11D│        7│[1B[11D└─────────┘");
     }
 }
